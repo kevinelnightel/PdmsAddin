@@ -1,0 +1,17 @@
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\bin\Debug\net8.0\MergeDxfAndDwg.exe
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\bin\Debug\net8.0\MergeDxfAndDwg.deps.json
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\bin\Debug\net8.0\MergeDxfAndDwg.runtimeconfig.json
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\bin\Debug\net8.0\MergeDxfAndDwg.dll
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\bin\Debug\net8.0\MergeDxfAndDwg.pdb
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\bin\Debug\net8.0\ACadSharp.dll
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.csproj.AssemblyReference.cache
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.GeneratedMSBuildEditorConfig.editorconfig
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.AssemblyInfoInputs.cache
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.AssemblyInfo.cs
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.csproj.CoreCompileInputs.cache
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxf.4A4BE8A8.Up2Date
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.dll
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\refint\MergeDxfAndDwg.dll
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.pdb
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.genruntimeconfig.cache
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\ref\MergeDxfAndDwg.dll

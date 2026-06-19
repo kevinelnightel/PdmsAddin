@@ -1,0 +1,131 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "ACadSharp/3.6.29": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/ACadSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/ACadSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ACadSharp/3.6.29": {
+      "sha512": "/eV+19tsT5REf7DmpKAXzeCk2E6hk/PE16zw6ZD4UiQblZkE+jlkYJPAtLVRztjrwkM/twt2MJcyeGUtxGo6vQ==",
+      "type": "package",
+      "path": "acadsharp/3.6.29",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "acadsharp.3.6.29.nupkg.sha512",
+        "acadsharp.nuspec",
+        "lib/net48/ACadSharp.dll",
+        "lib/net48/ACadSharp.xml",
+        "lib/net5.0/ACadSharp.dll",
+        "lib/net5.0/ACadSharp.xml",
+        "lib/net6.0/ACadSharp.dll",
+        "lib/net6.0/ACadSharp.xml",
+        "lib/net7.0/ACadSharp.dll",
+        "lib/net7.0/ACadSharp.xml",
+        "lib/net8.0/ACadSharp.dll",
+        "lib/net8.0/ACadSharp.xml",
+        "lib/net9.0/ACadSharp.dll",
+        "lib/net9.0/ACadSharp.xml",
+        "lib/netstandard2.0/ACadSharp.dll",
+        "lib/netstandard2.0/ACadSharp.xml",
+        "lib/netstandard2.1/ACadSharp.dll",
+        "lib/netstandard2.1/ACadSharp.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "ACadSharp >= 3.6.29"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Konthin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\MergeDxfAndDwg.csproj",
+      "projectName": "MergeDxfAndDwg",
+      "projectPath": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\MergeDxfAndDwg.csproj",
+      "packagesPath": "C:\\Users\\Konthin\\.nuget\\packages\\",
+      "outputPath": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Konthin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "ACadSharp": {
+            "target": "Package",
+            "version": "[3.6.29, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.315/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "G8wEX0zvxJU=",
+  "success": true,
+  "projectFilePath": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\MergeDxfAndDwg.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Konthin\\.nuget\\packages\\acadsharp\\3.6.29\\acadsharp.3.6.29.nupkg.sha512"
+  ],
+  "logs": []
+}
