@@ -375,7 +375,7 @@ namespace DxfToDwgPdmsPolylineFix
                 if (hasAnyWidth)
                 {
                     // 粗线强制绿色，ACI 3
-                    SetEntityGreen(lw);
+                    SetEntityColour(lw);
                 }
                 else
                 {
@@ -1108,7 +1108,7 @@ namespace DxfToDwgPdmsPolylineFix
             SetEntityColorByAci(entity, colorIndex.Value);
         }
 
-        static void SetEntityGreen(Entity entity)
+        static void SetEntityColour(Entity entity)
         {
             if (entity == null)
                 return;

@@ -35,3 +35,4 @@ E:\Csharpe_Aveva_Proj\PdmsAddin\PdmsAddin\obj\Debug\PdmsAddin.csproj.CoreCompile
 E:\Csharpe_Aveva_Proj\PdmsAddin\PdmsAddin\obj\Debug\PdmsAddin.csproj.Up2Date
 E:\Csharpe_Aveva_Proj\PdmsAddin\PdmsAddin\obj\Debug\PdmsAddin.dll
 E:\Csharpe_Aveva_Proj\PdmsAddin\PdmsAddin\obj\Debug\PdmsAddin.pdb
+E:\Csharpe_Aveva_Proj\PdmsAddin\PdmsAddin\obj\Debug\PdmsAddin.Properties.Resources.resources

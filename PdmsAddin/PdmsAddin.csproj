@@ -93,14 +93,38 @@
     <Compile Include="PdmsAddinUserControl.Designer.cs">
       <DependentUpon>PdmsAddinUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PdmsAddinUserControl.resx">
       <DependentUpon>PdmsAddinUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveAll.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveCE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iso.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Merge.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

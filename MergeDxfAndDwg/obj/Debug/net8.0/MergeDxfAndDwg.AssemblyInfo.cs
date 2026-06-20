@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MergeDxfAndDwg")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cb37c90753d13f0ace465f83d29d3e4c6294daf")]
 [assembly: System.Reflection.AssemblyProductAttribute("MergeDxfAndDwg")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MergeDxfAndDwg")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

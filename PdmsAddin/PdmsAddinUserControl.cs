@@ -151,23 +151,19 @@ namespace PdmsAddin
 
         }
 
-        private void btnTestCode_Click(object sender, EventArgs e)
+        private void btnMerge_Click(object sender, EventArgs e)
         {
             PipesHandle pipesHandle = new PipesHandle();
             foreach (string file in Directory.GetFiles(textBoxSavePath.Text))
             {
-                if(file.Contains(".dxf"))
+                if (file.Contains(".dxf"))
                 {
-                   // pipesHandle.TestCode(file);
                     PipesHandle.MergeDxfIntoDwg(file, textBoxDWGPath.Text);
                 }
-                    
+
             }
 
             MessageBox.Show("完成");
-
         }
-
-        
     }
 }

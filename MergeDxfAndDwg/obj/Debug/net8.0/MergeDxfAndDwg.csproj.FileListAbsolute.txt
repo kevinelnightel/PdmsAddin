@@ -15,3 +15,4 @@ E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\refint\MergeDxfA
 E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.pdb
 E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.genruntimeconfig.cache
 E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\ref\MergeDxfAndDwg.dll
+E:\Csharpe_Aveva_Proj\PdmsAddin\MergeDxfAndDwg\obj\Debug\net8.0\MergeDxfAndDwg.sourcelink.json

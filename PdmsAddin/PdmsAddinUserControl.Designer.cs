@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGetPipes = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PdmsAddinUserControl));
             this.dataGridViewPipeList = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.ColumnPipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxFilePath = new System.Windows.Forms.TextBox();
             this.btnLoadFilePath = new System.Windows.Forms.Button();
             this.openFileDialogFilePath = new System.Windows.Forms.OpenFileDialog();
@@ -41,36 +42,37 @@
             this.textBoxDWGPath = new System.Windows.Forms.TextBox();
             this.btnDWGPath = new System.Windows.Forms.Button();
             this.openFileDialogDWGPath = new System.Windows.Forms.OpenFileDialog();
-            this.btnTestCode = new System.Windows.Forms.Button();
-            this.ColumnPipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClearCe = new System.Windows.Forms.Button();
-            this.btnClearAll = new System.Windows.Forms.Button();
+            this.btnMerge = new System.Windows.Forms.Button();
             this.folderBrowserDialogSavePath = new System.Windows.Forms.FolderBrowserDialog();
+            this.toolTipbtnGetPipes = new System.Windows.Forms.ToolTip(this.components);
+            this.btnGetPipes = new System.Windows.Forms.Button();
+            this.toolTipbtnClearCe = new System.Windows.Forms.ToolTip(this.components);
+            this.btnClearCe = new System.Windows.Forms.Button();
+            this.toolTipbtnClearAll = new System.Windows.Forms.ToolTip(this.components);
+            this.btnClearAll = new System.Windows.Forms.Button();
+            this.toolTipbtnApply = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipbtnMerge = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPipeList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnGetPipes
-            // 
-            this.btnGetPipes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnGetPipes.Location = new System.Drawing.Point(27, 20);
-            this.btnGetPipes.Name = "btnGetPipes";
-            this.btnGetPipes.Size = new System.Drawing.Size(99, 61);
-            this.btnGetPipes.TabIndex = 0;
-            this.btnGetPipes.Text = "Add\r\nPipes";
-            this.btnGetPipes.UseVisualStyleBackColor = true;
-            this.btnGetPipes.Click += new System.EventHandler(this.btnShowHelloWorld_Click);
             // 
             // dataGridViewPipeList
             // 
             this.dataGridViewPipeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPipeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnPipe});
-            this.dataGridViewPipeList.Location = new System.Drawing.Point(27, 96);
+            this.dataGridViewPipeList.Location = new System.Drawing.Point(27, 66);
             this.dataGridViewPipeList.Name = "dataGridViewPipeList";
             this.dataGridViewPipeList.RowHeadersWidth = 62;
-            this.dataGridViewPipeList.RowTemplate.Height = 30;
-            this.dataGridViewPipeList.Size = new System.Drawing.Size(442, 564);
+            this.dataGridViewPipeList.RowTemplate.Height = 20;
+            this.dataGridViewPipeList.Size = new System.Drawing.Size(442, 607);
             this.dataGridViewPipeList.TabIndex = 1;
+            // 
+            // ColumnPipe
+            // 
+            this.ColumnPipe.HeaderText = "Pipeline";
+            this.ColumnPipe.MinimumWidth = 8;
+            this.ColumnPipe.Name = "ColumnPipe";
+            this.ColumnPipe.Width = 500;
             // 
             // textBoxFilePath
             // 
@@ -79,6 +81,7 @@
             this.textBoxFilePath.Name = "textBoxFilePath";
             this.textBoxFilePath.Size = new System.Drawing.Size(351, 31);
             this.textBoxFilePath.TabIndex = 2;
+            this.textBoxFilePath.Text = "D:\\PDMSISO";
             // 
             // btnLoadFilePath
             // 
@@ -117,12 +120,14 @@
             // 
             // btnApply
             // 
+            this.btnApply.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnApply.BackgroundImage")));
+            this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnApply.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnApply.Location = new System.Drawing.Point(27, 811);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(99, 47);
+            this.btnApply.Size = new System.Drawing.Size(50, 50);
             this.btnApply.TabIndex = 6;
-            this.btnApply.Text = "Apply";
+            this.toolTipbtnApply.SetToolTip(this.btnApply, "生成轴测图");
             this.btnApply.UseVisualStyleBackColor = true;
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
@@ -154,43 +159,56 @@
             // 
             this.openFileDialogDWGPath.FileName = "openFileDialogDWGPath";
             // 
-            // btnTestCode
+            // btnMerge
             // 
-            this.btnTestCode.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTestCode.Location = new System.Drawing.Point(146, 811);
-            this.btnTestCode.Name = "btnTestCode";
-            this.btnTestCode.Size = new System.Drawing.Size(99, 47);
-            this.btnTestCode.TabIndex = 9;
-            this.btnTestCode.Text = "Merge";
-            this.btnTestCode.UseVisualStyleBackColor = true;
-            this.btnTestCode.Click += new System.EventHandler(this.btnTestCode_Click);
+            this.btnMerge.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMerge.BackgroundImage")));
+            this.btnMerge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMerge.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMerge.Location = new System.Drawing.Point(83, 811);
+            this.btnMerge.Name = "btnMerge";
+            this.btnMerge.Size = new System.Drawing.Size(50, 50);
+            this.btnMerge.TabIndex = 9;
+            this.toolTipbtnMerge.SetToolTip(this.btnMerge, "合并底图");
+            this.btnMerge.UseVisualStyleBackColor = true;
+            this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
             // 
-            // ColumnPipe
+            // btnGetPipes
             // 
-            this.ColumnPipe.HeaderText = "Pipeline";
-            this.ColumnPipe.MinimumWidth = 8;
-            this.ColumnPipe.Name = "ColumnPipe";
-            this.ColumnPipe.Width = 500;
+            this.btnGetPipes.BackgroundImage = global::PdmsAddin.Properties.Resources.Add;
+            this.btnGetPipes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGetPipes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetPipes.Location = new System.Drawing.Point(27, 20);
+            this.btnGetPipes.Name = "btnGetPipes";
+            this.btnGetPipes.Size = new System.Drawing.Size(40, 40);
+            this.btnGetPipes.TabIndex = 0;
+            this.toolTipbtnGetPipes.SetToolTip(this.btnGetPipes, "添加管道");
+            this.btnGetPipes.UseVisualStyleBackColor = true;
+            this.btnGetPipes.Click += new System.EventHandler(this.btnShowHelloWorld_Click);
             // 
             // btnClearCe
             // 
+            this.btnClearCe.BackgroundImage = global::PdmsAddin.Properties.Resources.RemoveCE;
+            this.btnClearCe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClearCe.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnClearCe.Location = new System.Drawing.Point(146, 20);
+            this.btnClearCe.Location = new System.Drawing.Point(73, 20);
             this.btnClearCe.Name = "btnClearCe";
-            this.btnClearCe.Size = new System.Drawing.Size(99, 61);
+            this.btnClearCe.Size = new System.Drawing.Size(40, 40);
             this.btnClearCe.TabIndex = 10;
-            this.btnClearCe.Text = "Clear\r\nCE";
+            this.toolTipbtnClearCe.SetToolTip(this.btnClearCe, "移除当前管道");
             this.btnClearCe.UseVisualStyleBackColor = true;
             this.btnClearCe.Click += new System.EventHandler(this.btnClearCe_Click);
             // 
             // btnClearAll
             // 
+            this.btnClearAll.BackgroundImage = global::PdmsAddin.Properties.Resources.RemoveAll;
+            this.btnClearAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClearAll.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnClearAll.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnClearAll.Location = new System.Drawing.Point(261, 20);
+            this.btnClearAll.Location = new System.Drawing.Point(119, 20);
             this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(99, 61);
+            this.btnClearAll.Size = new System.Drawing.Size(40, 40);
             this.btnClearAll.TabIndex = 10;
-            this.btnClearAll.Text = "Clear\r\nAll";
+            this.toolTipbtnClearAll.SetToolTip(this.btnClearAll, "清空管道");
             this.btnClearAll.UseVisualStyleBackColor = true;
             this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
@@ -200,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnClearCe);
-            this.Controls.Add(this.btnTestCode);
+            this.Controls.Add(this.btnMerge);
             this.Controls.Add(this.btnDWGPath);
             this.Controls.Add(this.textBoxDWGPath);
             this.Controls.Add(this.btnApply);
@@ -212,6 +230,7 @@
             this.Controls.Add(this.btnGetPipes);
             this.Name = "PdmsAddinUserControl";
             this.Size = new System.Drawing.Size(492, 885);
+            this.toolTipbtnClearCe.SetToolTip(this, "移除当前管道");
             this.Load += new System.EventHandler(this.PdmsAddinUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPipeList)).EndInit();
             this.ResumeLayout(false);
@@ -223,7 +242,6 @@
 
         private System.Windows.Forms.Button btnGetPipes;
         private System.Windows.Forms.DataGridView dataGridViewPipeList;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox textBoxFilePath;
         private System.Windows.Forms.Button btnLoadFilePath;
         private System.Windows.Forms.OpenFileDialog openFileDialogFilePath;
@@ -234,10 +252,15 @@
         private System.Windows.Forms.TextBox textBoxDWGPath;
         private System.Windows.Forms.Button btnDWGPath;
         private System.Windows.Forms.OpenFileDialog openFileDialogDWGPath;
-        private System.Windows.Forms.Button btnTestCode;
+        private System.Windows.Forms.Button btnMerge;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPipe;
         private System.Windows.Forms.Button btnClearCe;
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialogSavePath;
+        private System.Windows.Forms.ToolTip toolTipbtnGetPipes;
+        private System.Windows.Forms.ToolTip toolTipbtnClearCe;
+        private System.Windows.Forms.ToolTip toolTipbtnClearAll;
+        private System.Windows.Forms.ToolTip toolTipbtnApply;
+        private System.Windows.Forms.ToolTip toolTipbtnMerge;
     }
 }
