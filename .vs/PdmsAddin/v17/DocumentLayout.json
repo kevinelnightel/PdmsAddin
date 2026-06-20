@@ -19,12 +19,12 @@
       "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C147E2-D4CC-4B74-AC86-0C920FF14E7C}|MergeDxfAndDwg\\MergeDxfAndDwg.csproj|e:\\csharpe_aveva_proj\\pdmsaddin\\mergedxfanddwg\\cadmerger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C147E2-D4CC-4B74-AC86-0C920FF14E7C}|MergeDxfAndDwg\\MergeDxfAndDwg.csproj|solutionrelative:mergedxfanddwg\\cadmerger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pdmsaddincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8C147E2-D4CC-4B74-AC86-0C920FF14E7C}|MergeDxfAndDwg\\MergeDxfAndDwg.csproj|e:\\csharpe_aveva_proj\\pdmsaddin\\mergedxfanddwg\\cadmerger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8C147E2-D4CC-4B74-AC86-0C920FF14E7C}|MergeDxfAndDwg\\MergeDxfAndDwg.csproj|solutionrelative:mergedxfanddwg\\cadmerger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,14 +48,14 @@
               "RelativeDocumentMoniker": "PdmsAddin\\PdmsAddinUserControl.cs",
               "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinUserControl.cs",
               "RelativeToolTip": "PdmsAddin\\PdmsAddinUserControl.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAgwIEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAmwJoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-20T03:19:42.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CadMerger.cs",
               "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\CadMerger.cs",
               "RelativeDocumentMoniker": "MergeDxfAndDwg\\CadMerger.cs",
@@ -63,12 +63,11 @@
               "RelativeToolTip": "MergeDxfAndDwg\\CadMerger.cs",
               "ViewState": "AgIAAEQEAAAAAAAAAAAYwEwEAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T03:14:43.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-20T03:14:43.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PdmsAddinCommand.cs",
               "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinCommand.cs",
               "RelativeDocumentMoniker": "PdmsAddin\\PdmsAddinCommand.cs",

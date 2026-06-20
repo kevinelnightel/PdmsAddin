@@ -20,7 +20,24 @@ namespace PdmsAddin
         public PdmsAddinUserControl()
         {
             InitializeComponent();
+            progressBarMyTool.Minimum = 0;
+            progressBarMyTool.Maximum = 100;
+            progressBarMyTool.Value = 0;
+            progressBarMyTool.Visible = false;
         }
+
+        public void ShowProgressBarSchdule(int progress) //设置进度条
+        {
+            progressBarMyTool.Value = progress;
+            
+        }
+
+        public void ShowLabelMessage(string message)    //设置内容
+        {
+            labelMessage.Text = message;
+            labelMessage.Refresh();
+        }
+
 
         private void PdmsAddinUserControl_Load(object sender, EventArgs e)
         {
@@ -91,7 +108,6 @@ namespace PdmsAddin
             }
 
         }
-
         private void btnSavePath_Click(object sender, EventArgs e)
         {
             //设置文件的保存路径
@@ -126,7 +142,6 @@ namespace PdmsAddin
             if (!string.IsNullOrEmpty(dir) && System.IO.Directory.Exists(dir))
                 openFileDialogDWGPath.InitialDirectory = dir;
 
-
             if (openFileDialogDWGPath.ShowDialog() == DialogResult.OK)
             {
                 textBoxDWGPath.Text = openFileDialogDWGPath.FileName;
@@ -137,23 +152,37 @@ namespace PdmsAddin
         {
             PipesHandle pipesHandle = new PipesHandle();    //处理工具的类先实例化
             pipesHandle.ClearFilePathFiles(textBoxSavePath.Text);   //先把文件夹里清空
+            
+            this.ShowLabelMessage("正在生成轴测图");
+
+            progressBarMyTool.Visible = true;   //显示进度条
+            int rowSize = dataGridViewPipeList.RowCount;
+            int i = 0;
+            int percent = 0;
 
             foreach (DataGridViewRow pipe in dataGridViewPipeList.Rows) //再依次去执行输出轴测图
             {
                 if (!pipe.IsNewRow)
                 {
-                    string pipeLine = pipe.Cells["ColumnPipe"].Value.ToString();
-                    
-                    pipesHandle.GenerateIso(textBoxFilePath.Text, textBoxSavePath.Text, pipeLine);
-                }
-                    
-            }
+                    string pipeLine = pipe.Cells["ColumnPipe"].Value.ToString();    //获取管线名
+                    pipesHandle.GenerateIso(textBoxFilePath.Text, textBoxSavePath.Text, pipeLine);  //依次去抽轴测图
 
+                    i++;
+                    percent = (int)((double)i / rowSize * 100);
+                    this.ShowProgressBarSchdule(percent);  //显示进度条
+                }
+
+            }
+            this.ShowLabelMessage("完成");
+            progressBarMyTool.Visible = false;   //隐藏进度条
         }
 
         private void btnMerge_Click(object sender, EventArgs e)
         {
             PipesHandle pipesHandle = new PipesHandle();
+
+            this.ShowLabelMessage("正在合并底图");
+
             foreach (string file in Directory.GetFiles(textBoxSavePath.Text))
             {
                 if (file.Contains(".dxf"))
@@ -162,7 +191,7 @@ namespace PdmsAddin
                 }
 
             }
-
+            this.ShowLabelMessage("完成");
             MessageBox.Show("完成");
         }
     }

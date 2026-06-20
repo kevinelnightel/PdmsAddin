@@ -52,7 +52,14 @@
             this.btnClearAll = new System.Windows.Forms.Button();
             this.toolTipbtnApply = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipbtnMerge = new System.Windows.Forms.ToolTip(this.components);
+            this.tabControlMyTools = new System.Windows.Forms.TabControl();
+            this.tabPageIsoTool = new System.Windows.Forms.TabPage();
+            this.tabPageMaterialTool = new System.Windows.Forms.TabPage();
+            this.progressBarMyTool = new System.Windows.Forms.ProgressBar();
+            this.labelMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPipeList)).BeginInit();
+            this.tabControlMyTools.SuspendLayout();
+            this.tabPageIsoTool.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewPipeList
@@ -60,11 +67,11 @@
             this.dataGridViewPipeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPipeList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnPipe});
-            this.dataGridViewPipeList.Location = new System.Drawing.Point(27, 66);
+            this.dataGridViewPipeList.Location = new System.Drawing.Point(27, 81);
             this.dataGridViewPipeList.Name = "dataGridViewPipeList";
             this.dataGridViewPipeList.RowHeadersWidth = 62;
             this.dataGridViewPipeList.RowTemplate.Height = 20;
-            this.dataGridViewPipeList.Size = new System.Drawing.Size(442, 607);
+            this.dataGridViewPipeList.Size = new System.Drawing.Size(442, 413);
             this.dataGridViewPipeList.TabIndex = 1;
             // 
             // ColumnPipe
@@ -77,16 +84,16 @@
             // textBoxFilePath
             // 
             this.textBoxFilePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxFilePath.Location = new System.Drawing.Point(27, 679);
+            this.textBoxFilePath.Location = new System.Drawing.Point(6, 6);
             this.textBoxFilePath.Name = "textBoxFilePath";
-            this.textBoxFilePath.Size = new System.Drawing.Size(351, 31);
+            this.textBoxFilePath.Size = new System.Drawing.Size(331, 31);
             this.textBoxFilePath.TabIndex = 2;
             this.textBoxFilePath.Text = "D:\\PDMSISO";
             // 
             // btnLoadFilePath
             // 
             this.btnLoadFilePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnLoadFilePath.Location = new System.Drawing.Point(384, 679);
+            this.btnLoadFilePath.Location = new System.Drawing.Point(343, 6);
             this.btnLoadFilePath.Name = "btnLoadFilePath";
             this.btnLoadFilePath.Size = new System.Drawing.Size(85, 31);
             this.btnLoadFilePath.TabIndex = 3;
@@ -101,16 +108,16 @@
             // textBoxSavePath
             // 
             this.textBoxSavePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxSavePath.Location = new System.Drawing.Point(27, 721);
+            this.textBoxSavePath.Location = new System.Drawing.Point(6, 43);
             this.textBoxSavePath.Name = "textBoxSavePath";
-            this.textBoxSavePath.Size = new System.Drawing.Size(351, 31);
+            this.textBoxSavePath.Size = new System.Drawing.Size(331, 31);
             this.textBoxSavePath.TabIndex = 4;
             this.textBoxSavePath.Text = "D:\\PDMSISO\\DXF";
             // 
             // btnSavePath
             // 
             this.btnSavePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSavePath.Location = new System.Drawing.Point(384, 721);
+            this.btnSavePath.Location = new System.Drawing.Point(343, 43);
             this.btnSavePath.Name = "btnSavePath";
             this.btnSavePath.Size = new System.Drawing.Size(85, 31);
             this.btnSavePath.TabIndex = 5;
@@ -123,7 +130,7 @@
             this.btnApply.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnApply.BackgroundImage")));
             this.btnApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnApply.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnApply.Location = new System.Drawing.Point(27, 811);
+            this.btnApply.Location = new System.Drawing.Point(8, 127);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(50, 50);
             this.btnApply.TabIndex = 6;
@@ -138,16 +145,16 @@
             // textBoxDWGPath
             // 
             this.textBoxDWGPath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxDWGPath.Location = new System.Drawing.Point(27, 763);
+            this.textBoxDWGPath.Location = new System.Drawing.Point(6, 80);
             this.textBoxDWGPath.Name = "textBoxDWGPath";
-            this.textBoxDWGPath.Size = new System.Drawing.Size(351, 31);
+            this.textBoxDWGPath.Size = new System.Drawing.Size(331, 31);
             this.textBoxDWGPath.TabIndex = 7;
             this.textBoxDWGPath.Text = "D:\\PDMSISO\\UNDER\\UNDER.DWG";
             // 
             // btnDWGPath
             // 
             this.btnDWGPath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDWGPath.Location = new System.Drawing.Point(384, 763);
+            this.btnDWGPath.Location = new System.Drawing.Point(343, 80);
             this.btnDWGPath.Name = "btnDWGPath";
             this.btnDWGPath.Size = new System.Drawing.Size(85, 31);
             this.btnDWGPath.TabIndex = 8;
@@ -164,7 +171,7 @@
             this.btnMerge.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMerge.BackgroundImage")));
             this.btnMerge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMerge.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMerge.Location = new System.Drawing.Point(83, 811);
+            this.btnMerge.Location = new System.Drawing.Point(64, 127);
             this.btnMerge.Name = "btnMerge";
             this.btnMerge.Size = new System.Drawing.Size(50, 50);
             this.btnMerge.TabIndex = 9;
@@ -212,20 +219,69 @@
             this.btnClearAll.UseVisualStyleBackColor = true;
             this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
+            // tabControlMyTools
+            // 
+            this.tabControlMyTools.Controls.Add(this.tabPageIsoTool);
+            this.tabControlMyTools.Controls.Add(this.tabPageMaterialTool);
+            this.tabControlMyTools.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabControlMyTools.Location = new System.Drawing.Point(27, 500);
+            this.tabControlMyTools.Name = "tabControlMyTools";
+            this.tabControlMyTools.SelectedIndex = 0;
+            this.tabControlMyTools.Size = new System.Drawing.Size(442, 336);
+            this.tabControlMyTools.TabIndex = 11;
+            // 
+            // tabPageIsoTool
+            // 
+            this.tabPageIsoTool.Controls.Add(this.textBoxFilePath);
+            this.tabPageIsoTool.Controls.Add(this.btnLoadFilePath);
+            this.tabPageIsoTool.Controls.Add(this.btnSavePath);
+            this.tabPageIsoTool.Controls.Add(this.btnMerge);
+            this.tabPageIsoTool.Controls.Add(this.btnDWGPath);
+            this.tabPageIsoTool.Controls.Add(this.btnApply);
+            this.tabPageIsoTool.Controls.Add(this.textBoxDWGPath);
+            this.tabPageIsoTool.Controls.Add(this.textBoxSavePath);
+            this.tabPageIsoTool.Location = new System.Drawing.Point(4, 33);
+            this.tabPageIsoTool.Name = "tabPageIsoTool";
+            this.tabPageIsoTool.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIsoTool.Size = new System.Drawing.Size(434, 299);
+            this.tabPageIsoTool.TabIndex = 0;
+            this.tabPageIsoTool.Text = "ISO Tools";
+            this.tabPageIsoTool.UseVisualStyleBackColor = true;
+            // 
+            // tabPageMaterialTool
+            // 
+            this.tabPageMaterialTool.Location = new System.Drawing.Point(4, 33);
+            this.tabPageMaterialTool.Name = "tabPageMaterialTool";
+            this.tabPageMaterialTool.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMaterialTool.Size = new System.Drawing.Size(434, 321);
+            this.tabPageMaterialTool.TabIndex = 1;
+            this.tabPageMaterialTool.Text = "Material Tool";
+            this.tabPageMaterialTool.UseVisualStyleBackColor = true;
+            // 
+            // progressBarMyTool
+            // 
+            this.progressBarMyTool.Location = new System.Drawing.Point(215, 842);
+            this.progressBarMyTool.Name = "progressBarMyTool";
+            this.progressBarMyTool.Size = new System.Drawing.Size(250, 21);
+            this.progressBarMyTool.TabIndex = 10;
+            // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Location = new System.Drawing.Point(34, 845);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(0, 18);
+            this.labelMessage.TabIndex = 12;
+            // 
             // PdmsAddinUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelMessage);
+            this.Controls.Add(this.progressBarMyTool);
+            this.Controls.Add(this.tabControlMyTools);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnClearCe);
-            this.Controls.Add(this.btnMerge);
-            this.Controls.Add(this.btnDWGPath);
-            this.Controls.Add(this.textBoxDWGPath);
-            this.Controls.Add(this.btnApply);
-            this.Controls.Add(this.btnSavePath);
-            this.Controls.Add(this.textBoxSavePath);
-            this.Controls.Add(this.btnLoadFilePath);
-            this.Controls.Add(this.textBoxFilePath);
             this.Controls.Add(this.dataGridViewPipeList);
             this.Controls.Add(this.btnGetPipes);
             this.Name = "PdmsAddinUserControl";
@@ -233,6 +289,9 @@
             this.toolTipbtnClearCe.SetToolTip(this, "移除当前管道");
             this.Load += new System.EventHandler(this.PdmsAddinUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPipeList)).EndInit();
+            this.tabControlMyTools.ResumeLayout(false);
+            this.tabPageIsoTool.ResumeLayout(false);
+            this.tabPageIsoTool.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +321,10 @@
         private System.Windows.Forms.ToolTip toolTipbtnClearAll;
         private System.Windows.Forms.ToolTip toolTipbtnApply;
         private System.Windows.Forms.ToolTip toolTipbtnMerge;
+        private System.Windows.Forms.TabControl tabControlMyTools;
+        private System.Windows.Forms.TabPage tabPageIsoTool;
+        private System.Windows.Forms.TabPage tabPageMaterialTool;
+        private System.Windows.Forms.ProgressBar progressBarMyTool;
+        private System.Windows.Forms.Label labelMessage;
     }
 }
