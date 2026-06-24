@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|e:\\csharpe_aveva_proj\\pdmsaddin\\pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pipeshandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pipeshandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pdmsaddin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|e:\\csharpe_aveva_proj\\pdmsaddin\\pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pdmsaddincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C147E2-D4CC-4B74-AC86-0C920FF14E7C}|MergeDxfAndDwg\\MergeDxfAndDwg.csproj|e:\\csharpe_aveva_proj\\pdmsaddin\\mergedxfanddwg\\cadmerger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C147E2-D4CC-4B74-AC86-0C920FF14E7C}|MergeDxfAndDwg\\MergeDxfAndDwg.csproj|solutionrelative:mergedxfanddwg\\cadmerger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pdmsaddin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|E:\\Csharpe_Aveva_Proj\\PdmsAddin\\pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A99B26A-BD36-4298-96B5-B12307BB9E83}|PdmsAddin\\PdmsAddin.csproj|solutionrelative:pdmsaddin\\pdmsaddinusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 266,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,40 +38,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PdmsAddinUserControl.cs",
-              "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinUserControl.cs",
-              "RelativeDocumentMoniker": "PdmsAddin\\PdmsAddinUserControl.cs",
-              "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinUserControl.cs",
-              "RelativeToolTip": "PdmsAddin\\PdmsAddinUserControl.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAmwJoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T03:19:42.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CadMerger.cs",
-              "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\CadMerger.cs",
-              "RelativeDocumentMoniker": "MergeDxfAndDwg\\CadMerger.cs",
-              "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\MergeDxfAndDwg\\CadMerger.cs",
-              "RelativeToolTip": "MergeDxfAndDwg\\CadMerger.cs",
-              "ViewState": "AgIAAEQEAAAAAAAAAAAYwEwEAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T03:14:43.646Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PdmsAddinCommand.cs",
               "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinCommand.cs",
               "RelativeDocumentMoniker": "PdmsAddin\\PdmsAddinCommand.cs",
               "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinCommand.cs",
               "RelativeToolTip": "PdmsAddin\\PdmsAddinCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T08:52:54.787Z",
+              "WhenOpened": "2026-06-23T23:45:23.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PipesHandle.cs",
+              "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PipesHandle.cs",
+              "RelativeDocumentMoniker": "PdmsAddin\\PipesHandle.cs",
+              "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PipesHandle.cs",
+              "RelativeToolTip": "PdmsAddin\\PipesHandle.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAGcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T08:28:51.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PdmsAddinUserControl.cs",
+              "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinUserControl.cs",
+              "RelativeDocumentMoniker": "PdmsAddin\\PdmsAddinUserControl.cs",
+              "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddinUserControl.cs",
+              "RelativeToolTip": "PdmsAddin\\PdmsAddinUserControl.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAqwAABAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-20T03:19:42.387Z",
               "EditorCaption": ""
             },
             {
@@ -98,23 +94,9 @@
               "RelativeDocumentMoniker": "PdmsAddin\\PdmsAddin.cs",
               "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PdmsAddin.cs",
               "RelativeToolTip": "PdmsAddin\\PdmsAddin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T08:28:53.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PipesHandle.cs",
-              "DocumentMoniker": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PipesHandle.cs",
-              "RelativeDocumentMoniker": "PdmsAddin\\PipesHandle.cs",
-              "ToolTip": "E:\\Csharpe_Aveva_Proj\\PdmsAddin\\PdmsAddin\\PipesHandle.cs",
-              "RelativeToolTip": "PdmsAddin\\PipesHandle.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAwBgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T08:28:51.361Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T08:28:53.632Z"
             }
           ]
         }

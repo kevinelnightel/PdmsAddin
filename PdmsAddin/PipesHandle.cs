@@ -9,12 +9,31 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace PdmsAddin
 {
+
+    public class rowMessage //构筑一个类用来存放每一行的表格数据
+    {
+        public string name;
+
+    }
+
     public class PipesHandle
     {
-        public List<String> AddPipes()
+        public void GetProjectMessage()
+        {
+            List<string> message = new List<string>();  //用一个空的列表来存放信息
+            string optProjectPathName = Project.CurrentProject.Name + "iso";    //获取项目的名称
+            string optProjectPath = Environment.GetEnvironmentVariable(optProjectPathName);  //获取项目文件夹下的配置文件夹路径
+            optProjectPath = optProjectPath.Replace(@"\\", @"\");
+            MessageBox.Show(optProjectPath);
+
+            //return message;
+        }
+
+        public List<String> AddPipes()  //添加管道
         {
             //获取当前
             DbElement currentElement = CurrentElement.Element;
@@ -36,6 +55,39 @@ namespace PdmsAddin
             return pipeList;
         }
 
+        public void GenerateMaterialList(string optSavePath, string fileSavePath, string pipeLine)  //根据选择的管线名和opt文件，输出matl文件
+        {
+            this.RunCommand("ISODRAFTMODE");
+            this.RunCommand("$m " + optSavePath);
+            this.RunCommand("File   \"" + fileSavePath + "\\temp\"  SINGLE"); //这个文件是必须生成的，临时生成一个文件，后面删除
+            this.RunCommand("MatlistFile \"" + fileSavePath + "\\matl\" APPEND with 55 lines");   //生成一个matl文件，通过拓展的方式
+
+            this.RunCommand("MaterialList  ON");
+            this.RunCommand("MaterialList TableDefinition Column 1 PARTNUMBER with Width 20");
+            this.RunCommand("Column 2 DESCRIPTION with Width 150");
+            this.RunCommand("Column 4 ITEMCODE with Width 20");
+            this.RunCommand("Column 5 QUANTITY in Metres with Width 20");
+
+            /*
+            用来调整这个matl 文件的格式，便于之后获取和统计格式
+            需要注意的是。中文和英文的宽度是不同的
+             */
+
+
+            this.RunCommand("detail   /" + pipeLine);
+            this.RunCommand("exit");
+
+            foreach (string file in Directory.GetFiles(fileSavePath))   //生成文件之后除了matl都删除掉
+            {
+                if(!file.Contains("matl"))
+                {
+                    File.Delete(file);
+                }
+
+            }
+
+        }
+
         public void GenerateIso(string optSavePath,string fileSavePath ,string pipeLine)    //根据输入的管线名和OPT文件，输出dxf文件
         {
             this.RunCommand("ISODRAFTMODE");
@@ -43,7 +95,6 @@ namespace PdmsAddin
             
             string new1PipeLine = pipeLine.Replace("\"", "'");   //如果管线名里有"符号，替换成'
             string new2PipeLine = new1PipeLine.Replace("/", ".");   //如果管线名里有/符号，替换成.
-
 
             this.RunCommand("File dxf  \"" + fileSavePath + "\\" + new2PipeLine + "-\"  SINGLE");
             this.RunCommand("detail   /" + pipeLine);
@@ -72,7 +123,7 @@ namespace PdmsAddin
             myCommand.Run();
         }
 
-        public static bool MergeDxfIntoDwg(string dxfPath, string dwgPath)
+        public static bool MergeDxfIntoDwg(string dxfPath, string dwgPath)  //用来合并dxf图纸和dwg底图
         {
             // 外部 exe 的绝对路径（可以根据实际情况配置）
             string exePath = @"C:\AVEVA\PdmsAddin\MergeDxfAndDwg.exe";

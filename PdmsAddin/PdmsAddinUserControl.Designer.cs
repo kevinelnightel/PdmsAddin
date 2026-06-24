@@ -55,11 +55,19 @@
             this.tabControlMyTools = new System.Windows.Forms.TabControl();
             this.tabPageIsoTool = new System.Windows.Forms.TabPage();
             this.tabPageMaterialTool = new System.Windows.Forms.TabPage();
+            this.btnGenerateMatil = new System.Windows.Forms.Button();
+            this.btnMatlFileSavePath = new System.Windows.Forms.Button();
+            this.textBoxMatlFileSavePath = new System.Windows.Forms.TextBox();
+            this.btnMatlOptFilePath = new System.Windows.Forms.Button();
+            this.textBoxMatlOptFilePath = new System.Windows.Forms.TextBox();
             this.progressBarMyTool = new System.Windows.Forms.ProgressBar();
             this.labelMessage = new System.Windows.Forms.Label();
+            this.openFileDialogMatlOptFilePath = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialogMatlFileSavePath = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPipeList)).BeginInit();
             this.tabControlMyTools.SuspendLayout();
             this.tabPageIsoTool.SuspendLayout();
+            this.tabPageMaterialTool.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewPipeList
@@ -88,7 +96,6 @@
             this.textBoxFilePath.Name = "textBoxFilePath";
             this.textBoxFilePath.Size = new System.Drawing.Size(331, 31);
             this.textBoxFilePath.TabIndex = 2;
-            this.textBoxFilePath.Text = "D:\\PDMSISO";
             // 
             // btnLoadFilePath
             // 
@@ -149,7 +156,7 @@
             this.textBoxDWGPath.Name = "textBoxDWGPath";
             this.textBoxDWGPath.Size = new System.Drawing.Size(331, 31);
             this.textBoxDWGPath.TabIndex = 7;
-            this.textBoxDWGPath.Text = "D:\\PDMSISO\\UNDER\\UNDER.DWG";
+            this.textBoxDWGPath.Text = "D:\\PDMSISO\\UNDER\\";
             // 
             // btnDWGPath
             // 
@@ -250,13 +257,67 @@
             // 
             // tabPageMaterialTool
             // 
+            this.tabPageMaterialTool.Controls.Add(this.btnGenerateMatil);
+            this.tabPageMaterialTool.Controls.Add(this.btnMatlFileSavePath);
+            this.tabPageMaterialTool.Controls.Add(this.textBoxMatlFileSavePath);
+            this.tabPageMaterialTool.Controls.Add(this.btnMatlOptFilePath);
+            this.tabPageMaterialTool.Controls.Add(this.textBoxMatlOptFilePath);
             this.tabPageMaterialTool.Location = new System.Drawing.Point(4, 33);
             this.tabPageMaterialTool.Name = "tabPageMaterialTool";
             this.tabPageMaterialTool.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMaterialTool.Size = new System.Drawing.Size(434, 321);
+            this.tabPageMaterialTool.Size = new System.Drawing.Size(434, 299);
             this.tabPageMaterialTool.TabIndex = 1;
             this.tabPageMaterialTool.Text = "Material Tool";
             this.tabPageMaterialTool.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerateMatil
+            // 
+            this.btnGenerateMatil.Location = new System.Drawing.Point(6, 80);
+            this.btnGenerateMatil.Name = "btnGenerateMatil";
+            this.btnGenerateMatil.Size = new System.Drawing.Size(106, 55);
+            this.btnGenerateMatil.TabIndex = 7;
+            this.btnGenerateMatil.Text = "APPLY";
+            this.btnGenerateMatil.UseVisualStyleBackColor = true;
+            this.btnGenerateMatil.Click += new System.EventHandler(this.btnGenerateMatil_Click);
+            // 
+            // btnMatlFileSavePath
+            // 
+            this.btnMatlFileSavePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMatlFileSavePath.Location = new System.Drawing.Point(343, 43);
+            this.btnMatlFileSavePath.Name = "btnMatlFileSavePath";
+            this.btnMatlFileSavePath.Size = new System.Drawing.Size(85, 31);
+            this.btnMatlFileSavePath.TabIndex = 6;
+            this.btnMatlFileSavePath.Text = "Save";
+            this.btnMatlFileSavePath.UseVisualStyleBackColor = true;
+            this.btnMatlFileSavePath.Click += new System.EventHandler(this.btnMatlFileSavePath_Click);
+            // 
+            // textBoxMatlFileSavePath
+            // 
+            this.textBoxMatlFileSavePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxMatlFileSavePath.Location = new System.Drawing.Point(6, 43);
+            this.textBoxMatlFileSavePath.Name = "textBoxMatlFileSavePath";
+            this.textBoxMatlFileSavePath.Size = new System.Drawing.Size(331, 31);
+            this.textBoxMatlFileSavePath.TabIndex = 5;
+            this.textBoxMatlFileSavePath.Text = "D:\\PDMSISO\\MTO";
+            // 
+            // btnMatlOptFilePath
+            // 
+            this.btnMatlOptFilePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMatlOptFilePath.Location = new System.Drawing.Point(343, 6);
+            this.btnMatlOptFilePath.Name = "btnMatlOptFilePath";
+            this.btnMatlOptFilePath.Size = new System.Drawing.Size(85, 31);
+            this.btnMatlOptFilePath.TabIndex = 4;
+            this.btnMatlOptFilePath.Text = "OPT";
+            this.btnMatlOptFilePath.UseVisualStyleBackColor = true;
+            this.btnMatlOptFilePath.Click += new System.EventHandler(this.btnMatlOptFilePath_Click);
+            // 
+            // textBoxMatlOptFilePath
+            // 
+            this.textBoxMatlOptFilePath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxMatlOptFilePath.Location = new System.Drawing.Point(6, 6);
+            this.textBoxMatlOptFilePath.Name = "textBoxMatlOptFilePath";
+            this.textBoxMatlOptFilePath.Size = new System.Drawing.Size(331, 31);
+            this.textBoxMatlOptFilePath.TabIndex = 3;
             // 
             // progressBarMyTool
             // 
@@ -272,6 +333,10 @@
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(0, 18);
             this.labelMessage.TabIndex = 12;
+            // 
+            // openFileDialogMatlOptFilePath
+            // 
+            this.openFileDialogMatlOptFilePath.FileName = "openFileDialogMatlOptFilePath";
             // 
             // PdmsAddinUserControl
             // 
@@ -292,6 +357,8 @@
             this.tabControlMyTools.ResumeLayout(false);
             this.tabPageIsoTool.ResumeLayout(false);
             this.tabPageIsoTool.PerformLayout();
+            this.tabPageMaterialTool.ResumeLayout(false);
+            this.tabPageMaterialTool.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +393,12 @@
         private System.Windows.Forms.TabPage tabPageMaterialTool;
         private System.Windows.Forms.ProgressBar progressBarMyTool;
         private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.TextBox textBoxMatlOptFilePath;
+        private System.Windows.Forms.Button btnMatlOptFilePath;
+        private System.Windows.Forms.Button btnMatlFileSavePath;
+        private System.Windows.Forms.TextBox textBoxMatlFileSavePath;
+        private System.Windows.Forms.OpenFileDialog openFileDialogMatlOptFilePath;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialogMatlFileSavePath;
+        private System.Windows.Forms.Button btnGenerateMatil;
     }
 }

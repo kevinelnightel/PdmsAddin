@@ -24,6 +24,13 @@ namespace PdmsAddin
             progressBarMyTool.Maximum = 100;
             progressBarMyTool.Value = 0;
             progressBarMyTool.Visible = false;
+
+            string currentProjectName = Project.CurrentProject.Name;    //获取项目的名称
+            string optProjectPath = Environment.GetEnvironmentVariable(currentProjectName + "iso") + @"\std\";  //获取默认的ISO图配置文件路径
+            optProjectPath = optProjectPath.Replace(@"\\", @"\");   //不知道为什么会有两个\出现，把它们替换掉
+            textBoxFilePath.Text = optProjectPath;
+            textBoxMatlOptFilePath.Text = optProjectPath;       //材料配置文件夹路径和轴测图配置文件路径的初始化
+
         }
 
         public void ShowProgressBarSchdule(int progress) //设置进度条
@@ -169,7 +176,7 @@ namespace PdmsAddin
 
                     i++;
                     percent = (int)((double)i / rowSize * 100);
-                    this.ShowProgressBarSchdule(percent);  //显示进度条
+                    this.ShowProgressBarSchdule(percent);  //显示进度
                 }
 
             }
@@ -183,16 +190,95 @@ namespace PdmsAddin
 
             this.ShowLabelMessage("正在合并底图");
 
-            foreach (string file in Directory.GetFiles(textBoxSavePath.Text))
+            string[] files = Directory.GetFiles(textBoxSavePath.Text, "*.dxf");
+            
+            progressBarMyTool.Visible = true;   //打开进度条
+            int size = files.Length;
+            int i = 0;
+            int percent = 0;
+            foreach (string file in files)
             {
-                if (file.Contains(".dxf"))
+                i++;
+                percent = (int)((double)i / size * 100);
+                this.ShowProgressBarSchdule(percent);  //显示进度
+
+                PipesHandle.MergeDxfIntoDwg(file, textBoxDWGPath.Text);
+            }
+            this.ShowLabelMessage("完成");
+            progressBarMyTool.Visible = false;   //隐藏进度条
+            MessageBox.Show("完成");
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            PipesHandle pipe = new PipesHandle();
+            pipe.GetProjectMessage();
+        }
+
+        private void btnMatlOptFilePath_Click(object sender, EventArgs e)
+        {
+            string inputPath = textBoxMatlOptFilePath.Text.Trim();
+            // 如果输入可能是文件路径，则取其目录；否则直接当作目录尝试
+            string dir = inputPath;
+            if (System.IO.File.Exists(inputPath))
+                dir = System.IO.Path.GetDirectoryName(inputPath);
+
+            if (!string.IsNullOrEmpty(dir) && System.IO.Directory.Exists(dir))
+                openFileDialogMatlOptFilePath.InitialDirectory = dir;
+
+            openFileDialogMatlOptFilePath.Title = "Please choose option file";
+            //如果文件选择没有问题，就把文件名设置复制进来
+            if (openFileDialogMatlOptFilePath.ShowDialog() == DialogResult.OK)
+            {
+                textBoxMatlOptFilePath.Text = openFileDialogMatlOptFilePath.FileName;
+            }
+        }
+
+        private void btnMatlFileSavePath_Click(object sender, EventArgs e)
+        {
+            //设置文件的保存路径
+            folderBrowserDialogMatlFileSavePath.Description = "Please set save path";
+
+            if (!string.IsNullOrEmpty(textBoxMatlFileSavePath.Text) && Directory.Exists(textBoxMatlFileSavePath.Text))
+            {
+                folderBrowserDialogMatlFileSavePath.SelectedPath = textBoxMatlFileSavePath.Text;
+            }
+
+            if (folderBrowserDialogMatlFileSavePath.ShowDialog() == DialogResult.OK)
+            {
+                // 将选中的文件夹路径存入 TextBox
+                textBoxMatlFileSavePath.Text = folderBrowserDialogMatlFileSavePath.SelectedPath;
+            }
+        }
+
+        private void btnGenerateMatil_Click(object sender, EventArgs e)
+        {
+            PipesHandle pipesHandle = new PipesHandle();    //处理工具的类先实例化
+            pipesHandle.ClearFilePathFiles(textBoxMatlFileSavePath.Text);   //先把文件夹里清空
+
+            this.ShowLabelMessage("正在生成材料文件");
+
+            progressBarMyTool.Visible = true;   //显示进度条
+            int rowSize = dataGridViewPipeList.RowCount;
+            int i = 0;
+            int percent = 0;
+
+            foreach (DataGridViewRow pipe in dataGridViewPipeList.Rows) //再依次去执行输出轴测图
+            {
+                if (!pipe.IsNewRow)
                 {
-                    PipesHandle.MergeDxfIntoDwg(file, textBoxDWGPath.Text);
+                    string pipeLine = pipe.Cells["ColumnPipe"].Value.ToString();    //获取管线名
+                    pipesHandle.GenerateMaterialList(textBoxMatlOptFilePath.Text, textBoxMatlFileSavePath.Text, pipeLine);  //依次去抽轴测图
+
+                    i++;
+                    percent = (int)((double)i / rowSize * 100);
+                    this.ShowProgressBarSchdule(percent);  //显示进度
                 }
 
             }
             this.ShowLabelMessage("完成");
-            MessageBox.Show("完成");
+            progressBarMyTool.Visible = false;   //隐藏进度条
+
         }
     }
 }

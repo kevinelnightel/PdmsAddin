@@ -1114,7 +1114,7 @@ namespace DxfToDwgPdmsPolylineFix
                 return;
 
             // AutoCAD ACI 3 = Green
-            SetEntityColorByAci(entity, 3);
+            SetEntityColorByAci(entity, 2);
         }
 
         static void SetEntityColorByAci(Entity entity, int colorIndex)
