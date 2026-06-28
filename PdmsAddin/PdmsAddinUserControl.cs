@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -263,19 +264,72 @@ namespace PdmsAddin
             int i = 0;
             int percent = 0;
 
+            string matlpath = textBoxMatlFileSavePath.Text + @"\temp";
+            if (!Directory.Exists(matlpath))
+            {
+                Directory.CreateDirectory(matlpath);
+            }
+
+            string jsonpath = textBoxMatlFileSavePath.Text + @"\json";
+            if (!Directory.Exists(jsonpath))
+            {
+                Directory.CreateDirectory(jsonpath);
+            }
+            string tempAllJsonDir  = jsonpath + @"\all.json";
+            string pipeFile = matlpath + "\\matl";
+            var jsonFiles = new List<string>();
+
             foreach (DataGridViewRow pipe in dataGridViewPipeList.Rows) //再依次去执行输出轴测图
             {
                 if (!pipe.IsNewRow)
                 {
                     string pipeLine = pipe.Cells["ColumnPipe"].Value.ToString();    //获取管线名
-                    pipesHandle.GenerateMaterialList(textBoxMatlOptFilePath.Text, textBoxMatlFileSavePath.Text, pipeLine);  //依次去抽轴测图
+                    pipesHandle.GenerateMaterialList(textBoxMatlOptFilePath.Text, matlpath, pipeLine);  //依次去抽轴测图
 
                     i++;
                     percent = (int)((double)i / rowSize * 100);
                     this.ShowProgressBarSchdule(percent);  //显示进度
+
+                    string outJson = @"D:\temp\" + pipeLine + ".json";
+                    jsonFiles.Add(outJson);
+                    var psi = new ProcessStartInfo
+                    {
+                        FileName = @"C:\AVEVA\PdmsAddin\MaterialHandle.exe",
+                        Arguments = "--parse \"" + pipeFile + "\" \"" + outJson + "\"",
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    };
+                    var p = Process.Start(psi);
+                    p.WaitForExit();
                 }
 
             }
+            var sb = new StringBuilder();
+            sb.Append("[");
+            for (int j = 0; j < jsonFiles.Count; j++)
+            {
+                var t = System.IO.File.ReadAllText(jsonFiles[j]).Trim();
+                if (t.StartsWith("[")) t = t.Substring(1);
+                if (t.EndsWith("]")) t = t.Substring(0, t.Length - 1);
+                if (!string.IsNullOrEmpty(t))
+                { if (j > 0) sb.Append(","); sb.Append(t); }
+            }
+            sb.Append("]");
+            System.IO.File.WriteAllText(tempAllJsonDir, sb.ToString());
+
+            var psi2 = new ProcessStartInfo
+            {
+                FileName = @"C:\AVEVA\PdmsAddin\MaterialHandle.exe",
+                Arguments = "--generate \"" + tempAllJsonDir + "\" \"" + textBoxMatlFileSavePath.Text + "\"",
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+            var p2 = Process.Start(psi2);
+            string result = p2.StandardOutput.ReadToEnd();
+            p2.WaitForExit();
+            if (p2.ExitCode != 0) { /* 失败 */ }
+
             this.ShowLabelMessage("完成");
             progressBarMyTool.Visible = false;   //隐藏进度条
 

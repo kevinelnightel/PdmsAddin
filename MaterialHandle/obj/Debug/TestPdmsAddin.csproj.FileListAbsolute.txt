@@ -1,0 +1,6 @@
+E:\Csharpe_Aveva_Proj\PdmsAddin\TestPdmsAddin\obj\Debug\TestPdmsAddin.csproj.AssemblyReference.cache
+E:\Csharpe_Aveva_Proj\PdmsAddin\TestPdmsAddin\obj\Debug\TestPdmsAddin.csproj.CoreCompileInputs.cache
+E:\Csharpe_Aveva_Proj\PdmsAddin\TestPdmsAddin\bin\Debug\TestPdmsAddin.exe
+E:\Csharpe_Aveva_Proj\PdmsAddin\TestPdmsAddin\bin\Debug\TestPdmsAddin.pdb
+E:\Csharpe_Aveva_Proj\PdmsAddin\TestPdmsAddin\obj\Debug\TestPdmsAddin.exe
+E:\Csharpe_Aveva_Proj\PdmsAddin\TestPdmsAddin\obj\Debug\TestPdmsAddin.pdb

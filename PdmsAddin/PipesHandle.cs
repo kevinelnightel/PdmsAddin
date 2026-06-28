@@ -17,7 +17,6 @@ namespace PdmsAddin
     public class rowMessage //构筑一个类用来存放每一行的表格数据
     {
         public string name;
-
     }
 
     public class PipesHandle
@@ -60,20 +59,13 @@ namespace PdmsAddin
             this.RunCommand("ISODRAFTMODE");
             this.RunCommand("$m " + optSavePath);
             this.RunCommand("File   \"" + fileSavePath + "\\temp\"  SINGLE"); //这个文件是必须生成的，临时生成一个文件，后面删除
-            this.RunCommand("MatlistFile \"" + fileSavePath + "\\matl\" APPEND with 55 lines");   //生成一个matl文件，通过拓展的方式
-
+            this.RunCommand("MatlistFile \"" + fileSavePath + "\\matl\" OVERWRITE with 55 lines");   //生成一个matl文件，通过拓展的方式
+            this.RunCommand("MessageFile \"%PDMSUSER%\\mess\" OVERWRITE");
             this.RunCommand("MaterialList  ON");
             this.RunCommand("MaterialList TableDefinition Column 1 PARTNUMBER with Width 20");
             this.RunCommand("Column 2 DESCRIPTION with Width 150");
             this.RunCommand("Column 4 ITEMCODE with Width 20");
             this.RunCommand("Column 5 QUANTITY in Metres with Width 20");
-
-            /*
-            用来调整这个matl 文件的格式，便于之后获取和统计格式
-            需要注意的是。中文和英文的宽度是不同的
-             */
-
-
             this.RunCommand("detail   /" + pipeLine);
             this.RunCommand("exit");
 
@@ -83,7 +75,6 @@ namespace PdmsAddin
                 {
                     File.Delete(file);
                 }
-
             }
 
         }
